@@ -13,3 +13,7 @@
 /*      PROFILE      */
 
 @import url(../blocks/profile/profile.css);
+
+/*      ELEMENTS      */
+
+@import url(../blocks/elements/elements.css);

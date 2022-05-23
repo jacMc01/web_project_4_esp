@@ -1,5 +1,5 @@
 .profile {
-    width: 80%;
+    max-width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
