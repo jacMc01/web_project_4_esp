@@ -49,6 +49,11 @@
     margin-bottom: 25px;
 }
 
+.profile__icon {
+    width: 13px;
+    height: 13px;
+}
+
 .profile__btn {
     width: 25%;
     height: 50px;
