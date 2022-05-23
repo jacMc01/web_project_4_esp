@@ -1,6 +1,11 @@
-html {
-    margin: 0;
-    padding: 0;
-    background: #000;
-    box-sizing: border-box;
-}
+/*      ROOT      */
+
+@import url(../blocks/root/root.css);
+
+/*      PAGE      */
+
+@import url(../blocks/page/page.css);
+
+/*      HEADER      */
+
+@import url(../blocks/header/header.css);
