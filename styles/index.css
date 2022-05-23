@@ -17,3 +17,7 @@
 /*      ELEMENTS      */
 
 @import url(../blocks/elements/elements.css);
+
+/*      FOOTER      */
+
+@import url(../blocks/footer/footer.css);
