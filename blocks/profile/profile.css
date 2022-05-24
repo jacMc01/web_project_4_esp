@@ -59,3 +59,21 @@
     height: 50px;
     border: 2px solid #fff;
 }
+
+@media screen and (max-width: 768px) {
+    .profile {
+        width: 80%;
+    }
+    .profile__name {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .profile__about {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .profile__btn {
+        width: 50%;
+        height: 40px;
+    }
+}
