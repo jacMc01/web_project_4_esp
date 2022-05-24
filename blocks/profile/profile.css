@@ -77,3 +77,22 @@
         height: 40px;
     }
 }
+
+@media screen and (max-width: 420px) {
+    .profile {
+        width: 80%;
+    }
+    .profile__name {
+        font-size: 18px;
+        line-height: 15px;
+    }
+    .profile__about {
+        font-size: 12px;
+        line-height: 8px;
+    }
+    .profile__btn {
+        width: 100%;
+        height: 30px;
+        margin-bottom: 25px;
+    }
+}

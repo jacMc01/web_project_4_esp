@@ -85,3 +85,34 @@
         background-color: #fff;
     }
 }
+
+@media screen and (max-width: 420px) {
+    .elements__element {
+        width: 100%;
+    }
+    .elements__photo {
+        width: 100%;
+    }
+    .elements__info {
+        display: flex;
+        background-color: #fff;
+    }
+    .elements__place {
+        flex-basis: 80%;
+        padding: 20px 0 20px 20px;
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 29.05px;
+        color: #000000;
+        background-color: #fff;
+    }
+    .elements__button {
+        background-color: #fff;
+        border: none;
+    }
+    .elements__icon {
+        width: 24px;
+        height: 24px;
+        background-color: #fff;
+    }
+}
