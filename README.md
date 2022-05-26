@@ -2,6 +2,10 @@
 
 ### Descripción general
 
+- Es un proyecto donde se implementa lo basico para la comunicacion entre JavaScript y el DOM.
+- Se realiza una pagina resposiva para varios dispositivos
+- Recordatorio del uso del HTML Semantico y CSS
+
 * Figma
 * Imágenes
 

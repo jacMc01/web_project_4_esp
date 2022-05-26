@@ -1,8 +1,7 @@
 .elements {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 70%;
     gap: 17px;
 }
 
@@ -61,6 +60,8 @@
         gap: 20px;
     }
     .elements__element {
+        width: 282px;
+        height: 361px;
         border-radius: 10px;
         border: none;
         background-color: #fff;
@@ -94,7 +95,7 @@
 
 @media screen and (max-width: 420px) {
     .elements__element {
-        width: 100%;
+        width: 282px;
     }
     .elements__photo {
         width: 100%;
