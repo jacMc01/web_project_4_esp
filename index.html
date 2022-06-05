@@ -75,11 +75,12 @@
             <button class="popup__button-close"><img src="./assets/img/close_icon.png" alt="close icon"></button>
             <div class="popup__container">
                 <h4 class="popup__title">Editar perfil</h4>
-                <fieldset class="popup__form" action="form">
-                    <input class="popup__name" type="text" placeholder="Nombre">
-                    <input class="popup__about" type="text" placeholder="Acerca de mi">
-                </fieldset>
-                <button onclick="handleProfileFormSubmit(evt)" class="popup__button-form">Guardar</button>
+                <form class="popup__form" action="form">
+                    <input class="popup__name" id="popup__name" type="text" placeholder="Nombre">
+                    <input class="popup__about" id="popup__about" type="text" placeholder="Acerca de mi">
+                    <button class="popup__button-form">Guardar</button>
+                </form>
+
             </div>
         </section>
         <footer class="footer">

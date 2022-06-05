@@ -54,11 +54,9 @@
 }
 
 .popup__button-form {
-    margin-left: 36px;
-    margin-bottom: 36px;
     width: 358px;
     height: 50px;
-    margin-top: 30px;
+    margin-top: 48px;
     background-color: #000;
     color: #fff;
     border: none;
