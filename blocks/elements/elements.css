@@ -50,6 +50,11 @@
     transition: 1s;
 }
 
+.elements__trash {
+    position: absolute;
+    background-image: none;
+}
+
 .profile__icon:hover {
     background-color: #545454;
 }

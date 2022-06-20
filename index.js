@@ -24,25 +24,58 @@ const initialCards = [{
     }
 ];
 
-const cardTemplate = document.querySelector("#elements").textContent;
+
+const elements = document.querySelector(".elements");
 const cardsContainer = document.querySelector(".elements__element");
 
-const addElement = function() {
+// funcion para agregar las cards.
+// se usa para hacer el llenado inicial y agregar con el boton
+const addCard = (url, description, alternative) => {
+
+    const cardElement = document.querySelector("template").content.children.elements__element.cloneNode(true);
+
+
+
+    cardElement.querySelector(".elements__place").textContent = description;
+    cardElement.querySelector(".elements__photo").src = url;
+    cardElement.querySelector(".elements__photo").alt = alternative;
+
+    elements.appendChild(cardElement);
+}
+
+
+// funcion para el llenado inicial
+function setup_cards() {
+
     initialCards.forEach(function(item) {
-        const cardElement = cardTemplate.querySelector(".elements__element").cloneNode(true);
-
-        cardElement.querySelector(".elements__place").textContent = item.name;
-        cardElement.querySelector(".elements__photo").src = item.link;
-        cardElement.querySelector(".elements__photo").alt = item.name;
+        addCard(item.link, item.name, item.name);
     });
-};
+
+}
 
 
-let formElement = document.querySelector('.popup__form');
-let formButton = document.querySelector('.popup__button-form');
-let profileButton = document.querySelector('.profile__btn');
 
 
+// agregar listener al boton que lanza el form para agregar cards
+const add_card_button = document.querySelector('.profile__btn');
+add_card_button.addEventListener("click", openFormImages)
+
+// set de codigo para agregar una card individual.
+///////////////////////////////////////////////////////////////
+function event_add_card(e) {
+
+    e.preventDefault();
+
+    addCard(e.target.form.elements.form__about.value, e.target.form.elements.form__name.value, e.target.form.elements.form__name.value);
+
+}
+
+document.querySelector('.form__button-form').addEventListener("click", event_add_card)
+    ///////////////////////////////////////////////////////////////
+
+
+// set de codigo para cambiar el nombre y descripcion.
+///////////////////////////////////////////////////////////////
 function handleProfileFormSubmit(evt) {
 
     evt.preventDefault();
@@ -58,7 +91,19 @@ function handleProfileFormSubmit(evt) {
 
 }
 
+document.querySelector(".popup__button-form").addEventListener("click", handleProfileFormSubmit)
+    //////////////////////////////////////////////////////////
 
+
+
+// llamada a la funcion de llenado inical
+setup_cards();
+
+
+
+
+
+// set de codigo de los botones
 function openForm() {
     document.querySelector(".popup").style.display = "block";
 }
@@ -78,6 +123,38 @@ function closeFormImages() {
 
 document.querySelector('.profile__button-person').addEventListener("click", openForm)
 document.querySelector('.popup__button-close').addEventListener("click", closeForm)
-document.querySelector(".popup__button-form").addEventListener("click", handleProfileFormSubmit)
-document.querySelector('.profile__btn').addEventListener("click", openFormImages)
+
 document.querySelector('.form__button').addEventListener("click", closeFormImages)
+
+
+//remover card
+
+document.querySelector(".elements").addEventListener("click", (e) => {
+    if (e.target.className === "elements__trash") {
+        e.target.parentElement.remove();
+    }
+
+
+    if (e.target.className === "elements__icon") {
+        // debugger
+        if (e.target.src.includes("black")) {
+            // debugger
+            e.target.src = "assets/img/heart.png";
+
+        } else {
+
+            e.target.src = "assets/img/heart_black.png"
+
+        }
+
+    }
+
+
+})
+
+
+// document.querySelector(".elements__element").lastElementChild.children.elements__button.addEventListener("click", (e) => {
+//             if (e.target.className === "elements__button") {
+//                 e.target.parentElement.remove();
+//             }
+//         }
