@@ -141,7 +141,7 @@
     }
     .popup__about {
         width: 238px;
-        margin: 0 auto;
+        /* margin: 0 auto; */
         font-size: 14px;
         line-height: 18px;
         margin: 0 21px;
