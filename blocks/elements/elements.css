@@ -3,6 +3,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 17px;
+    cursor: pointer;
 }
 
 .elements__element {
@@ -11,10 +12,10 @@
     border-radius: 10px;
     border: none;
     background-color: #fff;
+    position: relative;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    position: relative;
 }
 
 .elements__photo {
