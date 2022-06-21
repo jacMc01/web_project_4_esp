@@ -99,13 +99,10 @@ document.querySelector(".popup__button-form").addEventListener("click", handlePr
 // llamada a la funcion de llenado inical
 setup_cards();
 
-
-
-
-
 // set de codigo de los botones
 function openForm() {
     document.querySelector(".popup").style.display = "block";
+
 }
 
 function closeForm() {
@@ -151,10 +148,3 @@ document.querySelector(".elements").addEventListener("click", (e) => {
 
 
 })
-
-
-// document.querySelector(".elements__element").lastElementChild.children.elements__button.addEventListener("click", (e) => {
-//             if (e.target.className === "elements__button") {
-//                 e.target.parentElement.remove();
-//             }
-//         }
