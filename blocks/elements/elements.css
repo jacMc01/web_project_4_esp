@@ -52,7 +52,7 @@
 
 .elements__trash {
     position: absolute;
-    background-image: none;
+    background: transparent;
 }
 
 .profile__icon:hover {
