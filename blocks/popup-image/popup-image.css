@@ -15,4 +15,9 @@
     object-fit: cover;
 }
 
-.popup-image__button {}
+.popup-image__button {
+    position: absolute;
+    border: none;
+    right: -38px;
+    top: -38px;
+}
