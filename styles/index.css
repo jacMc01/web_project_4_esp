@@ -29,3 +29,7 @@
 /*      FORM      */
 
 @import url(../blocks/form/form.css);
+
+/*      POPUP-IMAGE      */
+
+@import url(../blocks/popup-image/popup-image.css);

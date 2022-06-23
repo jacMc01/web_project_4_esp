@@ -129,6 +129,7 @@ document.querySelector('.form__button').addEventListener("click", closeFormImage
 document.querySelector(".elements").addEventListener("click", (e) => {
     if (e.target.className === "elements__trash") {
         e.target.parentElement.remove();
+        return
     }
 
 
@@ -143,8 +144,28 @@ document.querySelector(".elements").addEventListener("click", (e) => {
             e.target.src = "assets/img/heart_black.png"
 
         }
-
+        return
     }
 
 
+    if (e.target.className === "elements__photo") {
+
+        popup_image.style.display = "block";
+        popup_image.children["popup-image__img"].src = e.target.src;
+        return
+    }
+
 })
+
+
+const popup_image = document.querySelector(".popup-image");
+
+function closePopupImage() {
+    popup_image.style.display = "none";
+}
+document.querySelector('.popup-image__button').addEventListener("click", closePopupImage)
+    //////////////////////////////////////////////////////////popup-image__button
+
+
+
+// popup-image logic
