@@ -86,6 +86,8 @@ function handleProfileFormSubmit(evt) {
     profile__name.textContent = evt.target.form.elements.popup__name.value;
     profile__about.textContent = evt.target.form.elements.popup__about.value;
 
+    evt.target.form.elements.popup__name.value = "";
+    evt.target.form.elements.popup__about.value = "";
 
     setTimeout(closeForm, 175)
 
@@ -164,8 +166,3 @@ function closePopupImage() {
     popup_image.style.display = "none";
 }
 document.querySelector('.popup-image__button').addEventListener("click", closePopupImage)
-    //////////////////////////////////////////////////////////popup-image__button
-
-
-
-// popup-image logic

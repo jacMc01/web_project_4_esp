@@ -13,9 +13,6 @@
     border: none;
     background-color: #fff;
     position: relative;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .elements__photo {
@@ -37,6 +34,9 @@
     line-height: 29.05px;
     color: #000000;
     background-color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .elements__button {
