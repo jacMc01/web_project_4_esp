@@ -41,6 +41,7 @@ const addCard = (url, description, alternative) => {
     cardElement.querySelector(".elements__photo").alt = alternative;
 
     elements.appendChild(cardElement);
+
 }
 
 
@@ -68,6 +69,10 @@ function event_add_card(e) {
 
     addCard(e.target.form.elements.form__about.value, e.target.form.elements.form__name.value, e.target.form.elements.form__name.value);
 
+    e.target.form.elements.form__about.value = "";
+    e.target.form.elements.form__name.value = "";
+
+    setTimeout(closeFormImages, 175)
 }
 
 document.querySelector('.form__button-form').addEventListener("click", event_add_card)
