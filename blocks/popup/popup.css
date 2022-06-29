@@ -52,6 +52,37 @@
     border-bottom: 1px solid #545454;
 }
 
+
+/*######################################################################################*/
+
+.popup__name-error {
+    border-bottom-color: red;
+}
+
+.popup__about-error {
+    border-bottom-color: red;
+}
+
+
+/* .popup__name:invalid {
+    border-bottom: 1px solid red;
+}
+
+.popup__name:valid {
+    border-bottom: 1px solid green;
+}
+
+.popup__about:invalid {
+    border-bottom: 1px solid red;
+}
+
+.popup__about:valid {
+    border-bottom: 1px solid green;
+} */
+
+
+/*######################################################################################*/
+
 .popup__about {
     width: 358px;
     height: 40px;
