@@ -109,7 +109,6 @@ setup_cards();
 // set de codigo de los botones
 function openForm() {
     document.querySelector(".popup").style.display = "block";
-
 }
 
 function closeForm() {
@@ -123,7 +122,7 @@ function openFormImages() {
 
 function closeFormImages() {
     document.querySelector(".form").style.display = "none";
-    document.addEventListener("keydown", pressEscape);
+
 }
 
 document.querySelector('.profile__button-person').addEventListener("click", openForm)
