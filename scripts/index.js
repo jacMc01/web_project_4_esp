@@ -171,3 +171,14 @@ function closePopupImage() {
     popup_image.style.display = "none";
 }
 document.querySelector('.popup-image__button').addEventListener("click", closePopupImage)
+
+
+// ########################################################
+
+function pressEscape(evt) {
+    if (evt.key === "Escape") {
+        close();
+    }
+}
+
+document.addEventListener("keydown", pressEscape);
