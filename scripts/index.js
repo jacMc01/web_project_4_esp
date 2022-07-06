@@ -175,17 +175,13 @@ document.querySelector('.popup-image__button').addEventListener("click", closePo
 
 // ########################################################
 
-document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape") {
-        closeFormImages();
-    }
-});
-
-document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape") {
+function pressEscape(e) {
+    if (e.key === "Escape") {
         closeForm();
     }
-});
+    if (e.key === "Escape") {
+        closeFormImages();
+    }
+}
 
-
-// document.addEventListener("keydown", pressEscape);
+document.addEventListener("keydown", pressEscape);
