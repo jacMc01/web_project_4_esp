@@ -182,6 +182,9 @@ function pressEscape(e) {
     if (e.key === "Escape") {
         closeFormImages();
     }
+    if (e.key === "Escape") {
+        closePopupImage();
+    }
 }
 
 document.addEventListener("keydown", pressEscape);
