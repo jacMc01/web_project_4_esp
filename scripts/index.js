@@ -123,6 +123,7 @@ function openFormImages() {
 
 function closeFormImages() {
     document.querySelector(".form").style.display = "none";
+    document.addEventListener("keydown", pressEscape);
 }
 
 document.querySelector('.profile__button-person').addEventListener("click", openForm)
@@ -175,10 +176,17 @@ document.querySelector('.popup-image__button').addEventListener("click", closePo
 
 // ########################################################
 
-function pressEscape(evt) {
-    if (evt.key === "Escape") {
-        close();
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        closeFormImages();
     }
-}
+});
 
-document.addEventListener("keydown", pressEscape);
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        closeForm();
+    }
+});
+
+
+// document.addEventListener("keydown", pressEscape);
