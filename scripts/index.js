@@ -180,11 +180,7 @@ document.querySelector('.popup-image__button').addEventListener("click", closePo
 function pressEscape(e) {
     if (e.key === "Escape") {
         closeForm();
-    }
-    if (e.key === "Escape") {
         closeFormImages();
-    }
-    if (e.key === "Escape") {
         closePopupImage();
     }
 }
@@ -195,9 +191,12 @@ document.addEventListener("keydown", pressEscape);
 // ########################################################
 
 function closePopup(e) {
-    if (!e.target.closest(".popup")) {
+
+    if (!e.target.closest(".popup") && !(e.target.classList.contains("profile__button-person") || e.target.classList.contains("profile__icon"))) {
         closeForm();
-        console.log("cerrado")
+    }
+    if (!e.target.closest(".form") && !(e.target.classList.contains("profile__button-plus") || e.target.classList.contains("profile__btn"))) {
+        closeFormImages();
     }
 }
 
