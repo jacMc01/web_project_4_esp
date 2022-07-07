@@ -126,6 +126,7 @@ function closeFormImages() {
 }
 
 document.querySelector('.profile__button-person').addEventListener("click", openForm)
+
 document.querySelector('.popup__button-close').addEventListener("click", closeForm)
 
 document.querySelector('.form__button').addEventListener("click", closeFormImages)
@@ -170,6 +171,7 @@ const popup_image = document.querySelector(".popup-image");
 function closePopupImage() {
     popup_image.style.display = "none";
 }
+
 document.querySelector('.popup-image__button').addEventListener("click", closePopupImage)
 
 
@@ -188,3 +190,15 @@ function pressEscape(e) {
 }
 
 document.addEventListener("keydown", pressEscape);
+
+
+// ########################################################
+
+function closePopup(e) {
+    if (!e.target.closest(".popup")) {
+        closeForm();
+        console.log("cerrado")
+    }
+}
+
+document.addEventListener("click", closePopup);
