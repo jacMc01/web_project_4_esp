@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1b77a47d-1969-4c6d-8d96-a3a6d20d4d96" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/web_project_4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/web_project_4_esp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nojekyll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/close_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/close_icon_grey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/elements__photo_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/elements__photo_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/elements__photo_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/elements__photo_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/elements__photo_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/elements__photo_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/elements_trash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/heart_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/prfile__pencil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/profile__img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/profile__plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/elements/elements.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/footer/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/form/form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/header/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/page/page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup-image/popup-image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/root/root.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/FormValidator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/card.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Black.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Black.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-BlackItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-BlackItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-BoldItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-BoldItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraBold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraBold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraBoldItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraBoldItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraLight.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraLight.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraLightItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraLightItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Light.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-LightItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-LightItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-MediumItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-MediumItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-SemiBold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-SemiBold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-SemiBoldItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-SemiBoldItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Thin.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-Thin.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-ThinItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-ThinItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-italic.var.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter-roman.var.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Inter.var.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/normalize.css" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BfolNDKUXFLplXKwVJsn43Q2s3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/jacqu/OneDrive/_General/Education/Yandex/JavaScrtip y DOM/web_project_4",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b77a47d-1969-4c6d-8d96-a3a6d20d4d96" name="Changes" comment="" />
+      <created>1657306652552</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657306652552</updated>
+      <workItem from="1657306656907" duration="1013000" />
+      <workItem from="1657307692312" duration="642000" />
+      <workItem from="1657308354706" duration="542000" />
+      <workItem from="1657308923354" duration="493000" />
+      <workItem from="1657309436753" duration="334000" />
+      <workItem from="1657757558850" duration="148000" />
+      <workItem from="1657757814030" duration="2563000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
