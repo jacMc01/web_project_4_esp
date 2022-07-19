@@ -2,83 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b77a47d-1969-4c6d-8d96-a3a6d20d4d96" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/web_project_4.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/web_project_4_esp.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nojekyll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/close_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/close_icon_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/elements__photo_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/elements__photo_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/elements__photo_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/elements__photo_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/elements__photo_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/elements__photo_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/elements_trash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/heart_black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/prfile__pencil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/profile__img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/profile__plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/elements/elements.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/footer/footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/form/form.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/header/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/page/page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup-image/popup-image.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/profile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/root/root.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/FormValidator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/card.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Black.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Black.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-BlackItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-BlackItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-BoldItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-BoldItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraBold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraBold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraBoldItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraBoldItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraLight.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraLight.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraLightItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-ExtraLightItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Light.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-LightItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-LightItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-MediumItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-MediumItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-SemiBold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-SemiBold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-SemiBoldItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-SemiBoldItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Thin.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-Thin.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-ThinItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-ThinItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-italic.var.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter-roman.var.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Inter.var.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/fonts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,19 +30,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/jacqu/OneDrive/_General/Education/Yandex/JavaScrtip y DOM/web_project_4",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jacqu/OneDrive/_General/Education/Yandex/JavaScrtip y DOM/web_project_4&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -133,7 +57,14 @@
       <workItem from="1657308923354" duration="493000" />
       <workItem from="1657309436753" duration="334000" />
       <workItem from="1657757558850" duration="148000" />
-      <workItem from="1657757814030" duration="2563000" />
+      <workItem from="1657757814030" duration="2460000" />
+      <workItem from="1657761625347" duration="29000" />
+      <workItem from="1657761748797" duration="89000" />
+      <workItem from="1657762042197" duration="650000" />
+      <workItem from="1657764017639" duration="12000" />
+      <workItem from="1657849175015" duration="1742000" />
+      <workItem from="1658190536629" duration="8646000" />
+      <workItem from="1658259071812" duration="756000" />
     </task>
     <servers />
   </component>
