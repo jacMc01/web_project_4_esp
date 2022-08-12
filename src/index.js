@@ -1,9 +1,20 @@
+import css from "./styles/index.css";
+
+
 import {Card} from "../src/scripts/Card.js";
 import FormValidator from "../src/scripts/FormValidator.js";
 
 // import * as utils from "./utils.js";
 import {fillInitCards} from "./scripts/Section.js";
 import PopupWithForm from "./scripts/PopupWithForm.js";
+
+
+function importAll(r) {
+    return r.keys().map(r);
+}
+  
+const images = importAll(require.context('./assets/', false, /\.(png|jpe?g|svg)$/));
+
 
 const elements = document.querySelector(".elements");
 

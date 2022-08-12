@@ -6,6 +6,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin"); // plugin de con
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); 
 
 module.exports = {
+
   devtool: 'inline-source-map', // para que webpack nos de el mapa de la app
   entry: {
     main: './src/index.js'
@@ -22,6 +23,7 @@ module.exports = {
     port: 8080, // abrirá tu página en localhost:8080 (puedes usar otro puerto)
     open: true, // se abrirá automáticamente en el navegador después de ejecutar npm run dev
     // stats: 'errors-only' //solo sale cuando se producen errores
+    watchFiles: ["src/*.html"], // permite que el servidor se actualice automáticamente cuando se modifique un archivo en el directorio de trabajo
   },
   module: {
     rules: [
@@ -32,17 +34,24 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: { importLoaders: 1 } 
-          },
-          "postcss-loader"
-        ],
+      //   use: ["style-loader", "css-loader",
+      //     MiniCssExtractPlugin.loader,
+      //     {
+      //       loader: "css-loader",
+      //       options: { importLoaders: 1 } 
+      //     },
+      //     "postcss-loader"
+      //   ],
+      // },
+      use: ["style-loader", "css-loader"],
       },
       {test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
-      type: "asset/resource"
+      type: "asset/*",
+        use: [
+          {
+            loader: "file-loader",
+          }
+        ]
       }
     ]
   },
