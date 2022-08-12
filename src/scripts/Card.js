@@ -1,4 +1,6 @@
-const initialCards = [{
+import { PopupWithImage } from "./PopupWhitImage.js";
+
+export const initialCards = [{
     name: "Valle de Yosemite",
     link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
 },
@@ -24,32 +26,27 @@ const initialCards = [{
     }
 ];
 
-const popupImage = document.querySelector(".popup-image__img");
-const popupElement = document.querySelector(".popup-image");
-const closeImage = document.querySelector(".popup-image__imagen");
+export class Card {
 
-export default class Card {
+    static elementsPlace = document.querySelector(".elements");
 
     constructor(data, cardSelector) {
         this._name = data.name;
         this._link = data.link;
         this._cardSelector = cardSelector
     }
-    static closePopupImage() {
-        popupElement.style.display = "none";
-    }
 
-    static setupInitialCards() {
-        initialCards.forEach((item)=> {
-        const card = new Card(item, ".elements__element");
+
+    static setupCard(cardItem) {
+        const card = new Card(cardItem, ".elements__element");
         const cardElement = card.generateCard();
 
-        document.querySelector(".elements").append(cardElement)
-        })
-    }
+        return cardElement;
 
-    static setupLikeButton() {
-        document.querySelector(".elements").addEventListener("click", (e) => {
+    }
+    
+
+    static setupLikeButton(e) {
             if (e.target.className === "elements__icon") {
                 if (e.target.src.includes("black")) {
                     e.target.src = "assets/img/heart.png";
@@ -57,10 +54,10 @@ export default class Card {
                     e.target.src = "assets/img/heart_black.png"
                 }
             }
-        })
-    }
+        }
 
-_getTemplate(){
+
+    _getTemplate(){
         const cardElement = document.querySelector("template").content
             .querySelector(this._cardSelector).cloneNode(true);
         return cardElement;
@@ -78,23 +75,28 @@ _getTemplate(){
         return this._element
     }
 
+
+
     _setEventListeners(){
         this._element.querySelector(".elements__photo").addEventListener("click", () => {
-            popupImage.src = this._link;
-            popupElement.style.display = "block";
+            const popupImage = new PopupWithImage(".popup-image");
+            popupImage.open(this._link);
         })
-        closeImage.addEventListener("click", () => {
-            popupElement.style.display = "none";
+        // agreagar event listener para el boton de cerrar
+        PopupWithImage.closeImage.addEventListener("click", () => {
+            const closeImage = new PopupWithImage(".popup-image");
+            closeImage.close();
         })
+
         this._element.querySelector(".elements__trash").addEventListener("click", () => {
-            this._element.remove()
+            this._element.remove();
+        })
+
+        this._element.querySelector(".elements__icon").addEventListener("click", (e) => {
+
+            Card.setupLikeButton(e);
         })
 
     }
 }
-
-Card.setupInitialCards()
-Card.setupLikeButton()
-
-
 

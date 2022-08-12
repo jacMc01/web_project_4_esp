@@ -14,17 +14,9 @@ export default class FormValidator {
 
         this._setEventListeners();
 
-        // funciones para el form 2 de las tarjetas
-        // formList = Array.from(document.querySelectorAll(".form__form"));
-        // formList.forEach((form) => {
-        //     form.addEventListener("submit", (evt) => {
-        //         evt.preventDefault();
-        //     });
-        //     this._setEventListeners(form, "card");
-        // });
     }
 
-     static _checkInputValidity(form, inputElement) {
+    static _checkInputValidity(form, inputElement) {
 
         const errorElement = form.querySelector(`.${inputElement.id}-error`);
 
