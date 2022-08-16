@@ -16,6 +16,8 @@ module.exports = {
     filename: 'main.js',
     publicPath: ''
   },
+  target: ['web', 'es5'],
+  stats: { children: true },
   mode: 'development',
   devServer: {
     static: path.resolve(__dirname, './dist'), // especifica una carpeta desde donde servir la aplicación y su contenido
@@ -46,12 +48,7 @@ module.exports = {
       use: ["style-loader", "css-loader"],
       },
       {test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
-      type: "asset/*",
-        use: [
-          {
-            loader: "file-loader",
-          }
-        ]
+      type: "asset/resource",
       }
     ]
   },

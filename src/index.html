@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="./vendor/normalize.css">
+    <!-- <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./vendor/normalize.css"> -->
     <title>Around The U.S</title>
 </head>
 
@@ -17,14 +17,14 @@
         </header>
         <section class="profile">
             <div class="profile__container">
-                <img src="./assets/img/profile__img.jpg" alt="a person" class="profile__img">
+                <img src="<%=require('./assets/img/profile__img.jpg')%>" alt="a person" class="profile__img">
                 <div class="profile__person">
                     <h2 class="profile__name">Jacqueline Mckay</h2>
                     <p class="profile__about">Estudiante Yandex</p>
                 </div>
-                <button class="profile__button-person"><img src="./assets/img/prfile__pencil.png" alt="heart icon" class="profile__icon"></button>
+                <button class="profile__button-person"><img src="<%=require('./assets/img/prfile__pencil.png')%>" alt="heart icon" class="profile__icon"></button>
             </div>
-            <button class="profile__btn-image"><img src="./assets/img/profile__plus.png" alt="icon plus" class="profile__button-plus"></button>
+            <button class="profile__btn-image"><img src="<%=require('./assets/img/profile__plus.png')%>" alt="icon plus" class="profile__button-plus"></button>
         </section>
 
         <section class="elements">
@@ -32,7 +32,7 @@
         </section>
         <section>
             <div class="popup class-form">
-                <button class="popup__button-close"><img src="./assets/img/close_icon.png" alt="close icon"></button>
+                <button class="popup__button-close"><img src="<%=require('./assets/img/close_icon.png')%>" alt="close icon"></button>
                 <div class="popup__profile-container">
                     <h4 class="popup__title">Editar perfil</h4>
 
@@ -49,7 +49,7 @@
             </div>
 
             <div class="form class-form">
-                <button class="form__button"><img src="./assets/img/close_icon.png" alt="close icon"></button>
+                <button class="form__button"><img src="<%=require('./assets/img/close_icon.png')%>" alt="close icon"></button>
                 <div class="form__image-container">
                     <h4 class="form__title">Nuevo lugar</h4>
                     <form class="form__form" name="form__form">
@@ -71,17 +71,17 @@
 
     <template>
         <div class="elements__element" id="elements__element">
-            <img type="button" src="./assets/img/elements_trash.png" alt="icon trash" class="elements__trash">
+            <img type="button" src="<%=require('./assets/img/elements_trash.png')%>" alt="icon trash" class="elements__trash">
             <img src="#" alt="#" class="elements__photo">
             <div class="elements__info">
                 <h3 class="elements__place"></h3>
-                <button class="elements__button"><img src="./assets/img/heart.png" alt="icon heart" class="elements__icon"></button>
+                <button class="elements__button"><img src="<%=require('./assets/img/heart.png')%>" alt="icon heart" class="elements__icon"></button>
             </div>
         </div>
     </template>
     <div class="popup-image">
-        <button class="popup-image__button"><img class="popup-image__imagen" src="./assets/img/close_icon.png" alt="close icon"></button>
-        <img src="./assets/img/elements__photo_2.jpg" alt="#" class="popup-image__img" id="popup-image__img">
+        <button class="popup-image__button"><img class="popup-image__imagen" src="<%=require('./assets/img/close_icon.png')%>" alt="close icon"></button>
+        <img src="<%=require('./assets/img/elements__photo_2.jpg')%>" alt="#" class="popup-image__img" id="popup-image__img">
     </div>
 </body>
 </html>

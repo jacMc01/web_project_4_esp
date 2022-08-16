@@ -1,3 +1,6 @@
+import heart from '../assets/img/heart.png';
+import heartBlack  from '../assets/img/heart_black.png';
+
 import { PopupWithImage } from "./PopupWhitImage.js";
 
 export const initialCards = [{
@@ -49,9 +52,9 @@ export class Card {
     static setupLikeButton(e) {
             if (e.target.className === "elements__icon") {
                 if (e.target.src.includes("black")) {
-                    e.target.src = "assets/img/heart.png";
+                    e.target.src = heart;
                 } else {
-                    e.target.src = "assets/img/heart_black.png"
+                    e.target.src = heartBlack;
                 }
             }
         }
