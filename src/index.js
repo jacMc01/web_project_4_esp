@@ -1,5 +1,5 @@
 import css from "./styles/index.css";
-
+import Api from "./scripts/Api.js";
 
 import {Card} from "../src/scripts/Card.js";
 import FormValidator from "../src/scripts/FormValidator.js";
@@ -12,7 +12,7 @@ import PopupWithForm from "./scripts/PopupWithForm.js";
 function importAll(r) {
     return r.keys().map(r);
 }
-  
+
 const images = importAll(require.context('./assets/', false, /\.(png|jpe?g|svg)$/));
 
 
@@ -87,3 +87,45 @@ document.querySelector('.profile__btn-image').addEventListener("click", openForm
 
 
 fillInitCards()
+
+
+
+// fetch("https://around.nomoreparties.co/v1/cohort-1-es/users/me", {
+//     method: "GET",
+//     headers: {
+//     authorization: "716b8afb-3113-4c1d-98fb-541a60ec168d",
+//     }
+// })
+//     .then(res => res.json())
+//     .then((result) => {
+//     console.log(result);
+//     console.log(JSON.stringify(result));
+// });
+
+const api = new Api({
+    baseUrl: "https://around.nomoreparties.co/v1/cohort-1-es/",
+    headers: {
+        authorization: "716b8afb-3113-4c1d-98fb-541a60ec168d",
+    }
+}); 
+
+let profileinfo = api.getDataProfile()
+
+console.log(profileinfo);
+
+console.log(api.getDataCard());
+
+
+
+
+
+// fetch("https://around.nomoreparties.co/v1/cohort-1-es/cards", {
+//     method: "GET",
+//     headers: {
+//     authorization: "716b8afb-3113-4c1d-98fb-541a60ec168d",
+//     }
+// })
+//     .then(res => res.json())
+//     .then((result) => {
+//     console.log(result);
+// });

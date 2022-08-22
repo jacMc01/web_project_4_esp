@@ -29,8 +29,6 @@ export default class PopupWithForm extends Popup{
     super.close();
 
     if (modal._config.type === "profile") {
-
-
       evt.target.form.elements.popup__name.value = "";
       evt.target.form.elements.popup__about.value = "";
     }
