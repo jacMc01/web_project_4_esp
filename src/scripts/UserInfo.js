@@ -1,9 +1,10 @@
 import Api from "./Api";
 
 export default class UserInfo{
-    constructor(nameClass, aboutClass){
+    constructor(nameClass, aboutClass, image){
         this._nameClass = nameClass;
         this._aboutClass = aboutClass;
+        this._image = image
 
     }
 
@@ -15,10 +16,14 @@ export default class UserInfo{
         }
     }
 
-    setUserInfo(name, about){
+    setUserInfo(name, about, image=null){
         
         document.querySelector(`${this._nameClass}`).textContent = name;
         document.querySelector(`${this._aboutClass}`).textContent = about;
+
+        if(image){
+            document.querySelector(`${this._image}`).src = image
+        }
     }
 
 }

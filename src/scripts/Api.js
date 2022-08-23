@@ -1,3 +1,7 @@
+// import PopupWithForm from "./PopupWithForm";
+import UserInfo from "./UserInfo";
+
+
 export default class Api {
   constructor({baseUrl, headers}) {
 
@@ -11,20 +15,21 @@ export default class Api {
   }
 
   getDataProfile(){
-    return fetch(this._urlProfile, {
+    fetch(this._urlProfile, {
       method: "GET",
       headers: {
         authorization: "716b8afb-3113-4c1d-98fb-541a60ec168d",
       }
     })
     .then(res => res.json())
-    .then((result) => {
-      return result;
+    .then(({name, about, avatar}) => {
+      const userObj = new UserInfo(".profile__name", ".profile__about", ".profile__img");
+      userObj.setUserInfo(name, about, avatar);
     })
   }
 
   getDataCard(){
-    return fetch(this._urlCard, {
+    fetch(this._urlCard, {
       method: "GET",
       headers: {
         authorization: "716b8afb-3113-4c1d-98fb-541a60ec168d",

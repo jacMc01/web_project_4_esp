@@ -78,14 +78,12 @@ export class Card {
         return this._element
     }
 
-
-
     _setEventListeners(){
         this._element.querySelector(".elements__photo").addEventListener("click", () => {
             const popupImage = new PopupWithImage(".popup-image");
             popupImage.open(this._link);
         })
-        // agreagar event listener para el boton de cerrar
+
         PopupWithImage.closeImage.addEventListener("click", () => {
             const closeImage = new PopupWithImage(".popup-image");
             closeImage.close();
@@ -96,7 +94,6 @@ export class Card {
         })
 
         this._element.querySelector(".elements__icon").addEventListener("click", (e) => {
-
             Card.setupLikeButton(e);
         })
 

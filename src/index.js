@@ -90,42 +90,25 @@ fillInitCards()
 
 
 
-// fetch("https://around.nomoreparties.co/v1/cohort-1-es/users/me", {
-//     method: "GET",
-//     headers: {
-//     authorization: "716b8afb-3113-4c1d-98fb-541a60ec168d",
-//     }
-// })
-//     .then(res => res.json())
-//     .then((result) => {
-//     console.log(result);
-//     console.log(JSON.stringify(result));
-// });
-
-const api = new Api({
+const apiProfile = new Api({
     baseUrl: "https://around.nomoreparties.co/v1/cohort-1-es/",
     headers: {
         authorization: "716b8afb-3113-4c1d-98fb-541a60ec168d",
     }
 }); 
 
-let profileinfo = api.getDataProfile()
+const apiCard = new Api({
+    baseUrl: "https://around.nomoreparties.co/v1/cohort-1-es/",
+    headers: {
+        authorization: "716b8afb-3113-4c1d-98fb-541a60ec168d",
+    }
+})
 
+
+let profileinfo = apiProfile.getDataProfile()
 console.log(profileinfo);
 
-console.log(api.getDataCard());
+let cardInfo = apiCard.getDataCard()
+console.log(cardInfo);
 
 
-
-
-
-// fetch("https://around.nomoreparties.co/v1/cohort-1-es/cards", {
-//     method: "GET",
-//     headers: {
-//     authorization: "716b8afb-3113-4c1d-98fb-541a60ec168d",
-//     }
-// })
-//     .then(res => res.json())
-//     .then((result) => {
-//     console.log(result);
-// });
