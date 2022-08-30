@@ -1,12 +1,13 @@
 import { Popup } from "./Popup.js";
 import {Card} from "./Card.js";
 import UserInfo from "./UserInfo.js";
+import Api from "./Api.js";
 
 export default class PopupWithForm extends Popup{
   constructor(config) {
     super(config);
-
   }
+
   _getInputValues(evt){
 
     if (this._config.type === "profile") {
@@ -19,7 +20,7 @@ export default class PopupWithForm extends Popup{
     if (this._config.type === "card") {
         return {
             "field1": evt.target.form.elements.form__name.value,
-            "field2": evt.target.form.elements.form__link.value
+            "field2": evt.target.form.elements.form__about.value
         }
     }
 
@@ -34,10 +35,11 @@ export default class PopupWithForm extends Popup{
     }
     if(modal._config.type === "card"){
       evt.target.form.elements.form__name.value = "";
-      evt.target.form.elements.form__link.value = "";
+      evt.target.form.elements.form__about.value = "";
     }
   }
 
+  //PROFILE
   static handleProfileFormSubmit(evt, modal) {
     evt.preventDefault();
 
@@ -50,17 +52,17 @@ export default class PopupWithForm extends Popup{
 
   }
 
+  //CARDS
   static event_add_card(e, modal) {
     e.preventDefault();
-
-    const formValues = this._getInputValues(e);
+    const formValues = modal._getInputValues(e);
 
     const cardItem = {
     "name": formValues.field1, "link": formValues.field2
     }
 
     const card = new Card(cardItem, ".elements__element")
-    const cardElement = card.generateCard();
+    const cardElement = card.generateCard(true);
 
     Card.elementsPlace.append(cardElement);
 

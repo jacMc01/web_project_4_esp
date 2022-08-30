@@ -1,10 +1,8 @@
-import {initialCards, Card} from "./Card.js";
+import {Card} from "./Card.js";
 
-
-// renderizar las cards
-export function fillInitCards() {
+export function fillInitCards(items) {
   const obj = {
-    items: initialCards,
+    items: items,
     renderer: Card.setupCard
   }
 

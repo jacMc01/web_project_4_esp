@@ -42,7 +42,6 @@ export class Popup{
             modal.close();
         });
         document.addEventListener("click", (e) => {
-            console.log("click_event")
             Popup._handleEscClose(e, modal, classFormSelector);
         });
     }

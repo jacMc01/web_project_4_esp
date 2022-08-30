@@ -1,4 +1,4 @@
-import Api from "./Api";
+import {apiElement} from "./Api";
 
 export default class UserInfo{
     constructor(nameClass, aboutClass, image){
@@ -17,6 +17,7 @@ export default class UserInfo{
     }
 
     setUserInfo(name, about, image=null){
+        apiElement.patchDataProfile(name, about);
         
         document.querySelector(`${this._nameClass}`).textContent = name;
         document.querySelector(`${this._aboutClass}`).textContent = about;

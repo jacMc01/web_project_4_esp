@@ -43,6 +43,11 @@
 .elements__button {
     background-color: #fff;
     border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .elements__icon {
@@ -51,6 +56,11 @@
     background-color: #fff;
     cursor: pointer;
     transition: 1s;
+}
+
+.elements__count{
+    background-color: #fff;
+    font-weight: bold;
 }
 
 .elements__trash {
