@@ -55,6 +55,10 @@
     height: 13px;
 }
 
+.profile__icon:hover {
+    background-color: #545454;
+}
+
 .profile__btn-image {
     width: 25%;
     height: 50px;

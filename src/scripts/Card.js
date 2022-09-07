@@ -3,36 +3,8 @@ import heartBlack  from '../assets/img/heart_black.png';
 import { apiElement } from './Api.js';
 
 import { PopupWithImage } from "./PopupWhitImage.js";
-import debug from "debug";
-
-// export const initialCards = [{
-//     name: "Valle de Yosemite",
-//     link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
-// },
-//     {
-//         name: "Lago Louise",
-//         link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
-//     },
-//     {
-//         name: "Montañas Calvas",
-//         link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
-//     },
-//     {
-//         name: "Latemar",
-//         link: "https://code.s3.yandex.net/web-code/latemar.jpg"
-//     },
-//     {
-//         name: "Parque Nacional de la Vanoise",
-//         link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
-//     },
-//     {
-//         name: "Lago di Braies",
-//         link: "https://code.s3.yandex.net/web-code/lago.jpg"
-//     }
-// ];
 
 export class Card {
-
     static elementsPlace = document.querySelector(".elements");
 
     constructor(data, cardSelector) {
@@ -41,8 +13,8 @@ export class Card {
         this._cardSelector = cardSelector
         this._likesArray = data.likes;
         this._cardID = data._id;
+        // this._trashButton = data.trashButton;
     }
-
 
     static setupCard(cardItem) {
         const card = new Card(cardItem, ".elements__element");
@@ -52,19 +24,17 @@ export class Card {
 
     }
 
-
     static setupLikeButton(e) {
-            if (e.target.className === "elements__icon") {
-                if (e.target.src.includes(heartBlack)) {
-                    e.target.src = heart;
-                    Card.counterLikesButton(e, true);
-                } else {
-
-                    e.target.src = heartBlack;
-                    Card.counterLikesButton(e);
-                }
+        if (e.target.className === "elements__icon") {
+            if (e.target.src.includes(heartBlack)) {
+                e.target.src = heart;
+                Card.counterLikesButton(e, true);
+            } else {
+                e.target.src = heartBlack;
+                Card.counterLikesButton(e);
             }
         }
+    }
 
     _getTemplate(){
         const cardElement = document.querySelector("template").content
@@ -73,7 +43,6 @@ export class Card {
     }
 
     generateCard(api = false){
-        // inserts in the DOM the card
         this._element = this._getTemplate();
         this._setEventListeners();
 
@@ -81,7 +50,7 @@ export class Card {
         this._element.querySelector(".elements__photo").src = this._link;
         this._element.querySelector(".elements__photo").alt = this._name;
 
-        // add an id to the .elements__info attribute
+
         this._element.querySelector(".elements__info").id = this._cardID;
 
         if(api){
@@ -98,11 +67,8 @@ export class Card {
         let elementCounter = e.target.nextElementSibling
         let spanCounter = elementCounter.textContent
         const currentLikes = parseInt(spanCounter);
-        //get the cardID from the .elements__info attribute id from e
 
         const cardID = e.target.parentElement.parentElement.id
-        // put like con el id de la card
-        // porque no funciona?
         if (reduce) {
             const res = apiElement.deleteLike(cardID)
             elementCounter.textContent =  currentLikes - 1
@@ -110,34 +76,55 @@ export class Card {
             const res = apiElement.putLike(cardID)
             elementCounter.textContent =  currentLikes + 1
         }
-
-
-
     }
 
-
     _setEventListeners(){
+
+        const link = this._link
+
+        let config = {
+            "selector": ".popup-image",
+            "closeButtonSelector": ".popup-image__img",
+        }
+
         this._element.querySelector(".elements__photo").addEventListener("click", () => {
-            const popupImage = new PopupWithImage(".popup-image");
-            popupImage.open(this._link);
+
+            const popupImage = new PopupWithImage(config);
+            popupImage.open(link);
         })
 
         PopupWithImage.closeImage.addEventListener("click", () => {
-            const closeImage = new PopupWithImage(".popup-image");
+            const closeImage = new PopupWithImage(config);
             closeImage.close();
         })
 
         this._element.querySelector(".elements__trash").addEventListener("click", () => {
-            this._element.remove();
+
+            // show popup from template with class elements-popup
+            let popupTemplate = document.querySelector("template").content.querySelector(".elements-popup")
+            let popupElement = popupTemplate.cloneNode(true);
+
+            // add event listener to popupElement button
+            popupElement.querySelector(".elements-popup__button").addEventListener("click", () => {
+                let cardID = this._element.querySelector(".elements__info").id
+                apiElement.deleteCardData(cardID)
+                this._element.remove();
+
+                //cerrar el popup
+                document.querySelector(".elements-popup").remove();
+
+            })
+
+            document.querySelector(".page").append(popupElement);
+            document.querySelector(".elements-popup").classList.add("elements-popup_active");
         })
 
         this._element.querySelector(".elements__icon").addEventListener("click", (e) => {
-
             // Card.counterLikesButton(e);
             Card.setupLikeButton(e);
-
         })
     }
-
 }
+
+
 

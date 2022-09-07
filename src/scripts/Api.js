@@ -68,13 +68,10 @@ export default class Api {
   }
 
   putLike(cardId) {
-    // console.log(this._urlCard + "/likes/" + cardId)
-    // debugger
     return fetch(this._urlCard + "/likes/" + cardId, {
       method: "PUT",
       headers: {
         authorization: this._token,
-        // "Content-Type": "application/json"
       },
     }).then(res => res.json())
   }
@@ -116,6 +113,15 @@ export default class Api {
       })
     })
     .then(res => res.json())
+  }
+
+  deleteCardData(id) {
+    return fetch(this._urlCard + "/" + id, {
+      method: "DELETE",
+      headers: {
+        authorization: this._token,
+      },
+    }).then(res => res.json())
   }
 }
 

@@ -73,10 +73,22 @@
             <img src="#" alt="#" class="elements__photo">
             <div class="elements__info" id="#">
                 <h3 class="elements__place"></h3>
-                <button class="elements__button"><img src="<%=require('./assets/img/heart.png')%>" alt="icon heart" class="elements__icon"><span class="elements__count">#</span></button>
+                <button class="elements__button"><img src="<%=require('./assets/img/heart.png')%>" alt="icon heart" class="elements__icon"><span class="elements__count"></span></button>
             </div>
         </div>
+
+        <div class="elements-popup">
+            <button class="elements-popup__icon"><img class="elements-popup__trash" src="<%=require('./assets/img/close_icon.png')%>" alt="close icon"></button>
+            <div class="elements-popup__title">¿Estas seguro/a?</div>
+            <div class="elements-popup__button">Si</div>
+        </div>
+
     </template>
+<!--    <div class="elements-popup">-->
+<!--        <button class="elements-popup__icon"><img src="<%=require('./assets/img/close_icon.png')%>" alt="close icon"></button>-->
+<!--        <div class="elements-popup__title">¿Estas seguro/a?</div>-->
+<!--        <div class="elements-popup__button">Si</div>-->
+<!--    </div>-->
     <div class="popup-image">
         <button class="popup-image__button"><img class="popup-image__imagen" src="<%=require('./assets/img/close_icon.png')%>" alt="close icon"></button>
         <img src="<%=require('./assets/img/elements__photo_2.jpg')%>" alt="#" class="popup-image__img" id="popup-image__img">

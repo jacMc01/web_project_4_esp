@@ -11,38 +11,9 @@ import PopupWithForm from "./scripts/PopupWithForm.js";
 import UserInfo from "./scripts/UserInfo";
 import debug from "debug";
 
-
-function importAll(r) {
-    return r.keys().map(r);
-}
-
-const images = importAll(require.context('./assets/', false, /\.(png|jpe?g|svg)$/));
-
-
-const elements = document.querySelector(".elements");
-
-// funcion para agregar las cards.
-// se usa para hacer el llenado inicial y agregar con el boton
-// const addCard = (url, description) => {
-//     const cardData = {
-//         name: description,
-//         link: url
-//     }
-//
-//     const card = new Card(cardData, ".elements__element");
-//     const cardElement = card.generateCard();
-//
-//     elements.appendChild(cardElement);
-// }
-
 // agregar listener al boton que lanza el form para agregar cards
 const add_card_button = document.querySelector('.profile__btn-image');
 add_card_button.addEventListener("click", openFormImages)
-
-// set de codigo para agregar una card individual.
-
-
-
 
 function openForm() {
 
@@ -87,6 +58,8 @@ document.querySelector('.profile__button-person').addEventListener("click", open
 document.querySelector('.profile__btn-image').addEventListener("click", openFormImages)
 
 
+// tarea 1. Entender que hace esto. MUST
+
 let cardsArray = []
 apiElement.getDataCard().then((res) => {
     cardsArray = res
@@ -98,28 +71,31 @@ apiElement.getDataCard().then((res) => {
 
         // funcion para agreaar los likes
         cardsArray.forEach((card) => {
-            let currentId = card._id;
+            let ownner_id = card.owner._id
 
+            let currentId = card._id;
             let likesArray = card.likes
+
             if (likesArray.length > 0) {
 
                 // check if _id exists in likesArray
                 console.dir(likesArray)
                 likesArray.forEach((like) => {
                     if (like._id === _id) {
-
-                        let likeContainer = document.getElementById(currentId).querySelector(".elements__button img").src = heartBlack
-
+                        // la idea fue encontrar quienes ya tenian el like con el userID y esos que ya tuvieran el like
+                        // se les agregaba el corazon.
+                        document.getElementById(currentId).querySelector(".elements__button img").src = heartBlack
                     }
                 })
             }
+
+            if (_id !== ownner_id) {
+                document.getElementById(currentId).parentElement.querySelector(".elements__trash").style.display = "none"
+            }
         })
-
     })
-
-
-
 })
+
 
 
 

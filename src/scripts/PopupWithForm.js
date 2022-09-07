@@ -9,7 +9,6 @@ export default class PopupWithForm extends Popup{
   }
 
   _getInputValues(evt){
-
     if (this._config.type === "profile") {
       return {
         "field1": evt.target.form.elements.popup__name.value,
@@ -49,7 +48,6 @@ export default class PopupWithForm extends Popup{
     userObj.setUserInfo(formValues.field1,formValues.field2);
 
     setTimeout(modal.close(evt, modal), 175)
-
   }
 
   //CARDS
@@ -60,7 +58,6 @@ export default class PopupWithForm extends Popup{
     const cardItem = {
     "name": formValues.field1, "link": formValues.field2
     }
-
     const card = new Card(cardItem, ".elements__element")
     const cardElement = card.generateCard(true);
 
