@@ -16,6 +16,10 @@ export class Popup{
 
     static _handleEscClose(e, modal, classFormSelector) {
         if (e.key === "Escape") {
+            if (classFormSelector === ".elements-popup") {
+                modal.remove()
+                return
+            }
             modal.close();
         }
 
@@ -29,6 +33,9 @@ export class Popup{
                 modal.close();
             }
         }
+
+
+
     }
 
     setEventListeners(){

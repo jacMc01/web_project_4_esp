@@ -3,6 +3,7 @@ import heartBlack  from '../assets/img/heart_black.png';
 import { apiElement } from './Api.js';
 
 import { PopupWithImage } from "./PopupWhitImage.js";
+import {Popup} from "./Popup";
 
 export class Card {
     static elementsPlace = document.querySelector(".elements");
@@ -104,6 +105,10 @@ export class Card {
             let popupTemplate = document.querySelector("template").content.querySelector(".elements-popup")
             let popupElement = popupTemplate.cloneNode(true);
 
+            popupElement.querySelector(".elements-popup__trash").addEventListener("click", () => {
+                popupElement.remove();
+            })
+
             // add event listener to popupElement button
             popupElement.querySelector(".elements-popup__button").addEventListener("click", () => {
                 let cardID = this._element.querySelector(".elements__info").id
@@ -115,8 +120,29 @@ export class Card {
 
             })
 
-            document.querySelector(".page").append(popupElement);
-            document.querySelector(".elements-popup").classList.add("elements-popup_active");
+            setTimeout(() => {
+                document.querySelector(".page").append(popupElement);
+                document.querySelector(".elements-popup").classList.add("elements-popup_active");
+
+                document.addEventListener("keydown", (e) => {
+                    let modal = document.querySelector(".elements-popup")
+                    Popup._handleEscClose(e, modal, ".elements-popup")
+                })
+
+                document.addEventListener("click", (e) => {
+
+                    const element = document.querySelector(".elements-popup")
+                    const insideImage = e.composedPath().includes(element)
+
+                    if (!insideImage) {
+
+                        if(element){
+                            element.remove();
+                        }
+                    }
+                })
+            },100)
+
         })
 
         this._element.querySelector(".elements__icon").addEventListener("click", (e) => {

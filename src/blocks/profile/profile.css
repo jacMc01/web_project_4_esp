@@ -5,13 +5,35 @@
     align-items: center;
 }
 
+.profile__images{
+    padding: 0;
+    flex-basis: 120px;
+    margin-right: 18px;
+}
+
+.profile__images:hover > img {
+    cursor: pointer;
+    opacity: 0.2;
+    transition: 0.8s ease-in-out;
+    /*display: block;*/
+}
+
 .profile__img {
-    width: 15%;
+    width: 100%;
     height: 100%;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
     margin: 36px 20px 46px 0;
+}
+
+.profile__edit{
+    /*display: none;*/
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    opacity: 0;
+    transform: translate(50px, -100px);
 }
 
 .profile__container {

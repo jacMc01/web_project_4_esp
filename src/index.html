@@ -15,7 +15,11 @@
         </header>
         <section class="profile">
             <div class="profile__container">
-                <img src="<%=require('./assets/img/profile__img.jpg')%>" alt="a person" class="profile__img">
+                <div class="profile__images">
+<!--                    <img src="<%=require('./assets/img/profile__img.jpg')%>" alt="a person" class="profile__img">-->
+                    <img src="" alt="a person" class="profile__img">
+                    <img src="<%=require('./assets/img/prfile__pencil.png')%>" alt="icon edit image" class="profile__edit">
+                </div>
                 <div class="profile__person">
                     <h2 class="profile__name">...</h2>
                     <p class="profile__about">...</p>
@@ -24,7 +28,6 @@
             </div>
             <button class="profile__btn-image"><img src="<%=require('./assets/img/profile__plus.png')%>" alt="icon plus" class="profile__button-plus"></button>
         </section>
-
         <section class="elements">
             
         </section>
@@ -33,7 +36,6 @@
                 <button class="popup__button-close"><img src="<%=require('./assets/img/close_icon.png')%>" alt="close icon"></button>
                 <div class="popup__profile-container">
                     <h4 class="popup__title">Editar perfil</h4>
-
                     <form class="popup__form" name="popup__form" novalidate>
                         <input class="popup__name popup__input" id="popup__name" type="text" placeholder="Nombre" minlength="2" maxlength="40" required>
                         <span class="popup__name-error"></span>
@@ -60,6 +62,9 @@
                     </form>
                 </div>
             </div>
+
+
+
         </section>
 
         <footer class="footer">
@@ -84,11 +89,18 @@
         </div>
 
     </template>
-<!--    <div class="elements-popup">-->
-<!--        <button class="elements-popup__icon"><img src="<%=require('./assets/img/close_icon.png')%>" alt="close icon"></button>-->
-<!--        <div class="elements-popup__title">¿Estas seguro/a?</div>-->
-<!--        <div class="elements-popup__button">Si</div>-->
-<!--    </div>-->
+
+    <div class="elements-modal">
+        <form class="elements-modal__container" name="elements-modal__container">
+            <button class="elements-modal__button-icon"><img type="button" src="<%=require('./assets/img/close_icon.png')%>" alt="icon close modal" class="elements-modal__close-icon"></button>
+            <h4 class="elements-modal__title">Cambiar foto de perfil</h4>
+            <input class="elements-modal__input" id="elements-input" type="text" placeholder="Url de la imagen" maxlength="200" minlength="2">
+            <span class="elements-modal__error"></span>
+            <button class="elements-modal__button elements-modal__button-inactive">Guardar</button>
+        </form>
+    </div>
+
+
     <div class="popup-image">
         <button class="popup-image__button"><img class="popup-image__imagen" src="<%=require('./assets/img/close_icon.png')%>" alt="close icon"></button>
         <img src="<%=require('./assets/img/elements__photo_2.jpg')%>" alt="#" class="popup-image__img" id="popup-image__img">

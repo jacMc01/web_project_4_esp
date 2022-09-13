@@ -1,15 +1,12 @@
 import css from "./styles/index.css";
 import { apiElement } from "./scripts/Api.js";
 
-import {Card, initialCards} from "../src/scripts/Card.js";
 import FormValidator from "../src/scripts/FormValidator.js";
 
 import heartBlack from './assets/img/heart_black.png';
-// import * as utils from "./utils.js";
 import Section, {fillInitCards} from "./scripts/Section.js";
 import PopupWithForm from "./scripts/PopupWithForm.js";
 import UserInfo from "./scripts/UserInfo";
-import debug from "debug";
 
 // agregar listener al boton que lanza el form para agregar cards
 const add_card_button = document.querySelector('.profile__btn-image');
@@ -54,11 +51,27 @@ function openFormImages() {
 
 }
 
+
+function openFormAvatar() {
+
+        const config = {
+            formName: "elements-modal__container",
+            type: "avatar",
+            selector: ".elements-modal",
+            closeButtonSelector: ".elements-modal__close-icon"
+        }
+
+        const popupElement = new PopupWithForm(config)
+        popupElement.open();
+
+        popupElement.setEventListeners();
+
+}
+
+
 document.querySelector('.profile__button-person').addEventListener("click", openForm)
 document.querySelector('.profile__btn-image').addEventListener("click", openFormImages)
-
-
-// tarea 1. Entender que hace esto. MUST
+document.querySelector('.profile__img').addEventListener("click", openFormAvatar)
 
 let cardsArray = []
 apiElement.getDataCard().then((res) => {

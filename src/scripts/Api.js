@@ -100,6 +100,20 @@ export default class Api {
     .then(res => res.json())
   }
 
+  patchAvatar(url){
+    return fetch(this._baseUrl + "users/me/avatar", {
+      method: "PATCH",
+      headers: {
+        authorization: this._token,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        avatar: url,
+    })
+
+  }).then(res => res.json())
+
+  }
   patchDataCard(name, link){
     return fetch(this._urlCard, {
       method: "PATCH",

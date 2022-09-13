@@ -1,7 +1,7 @@
 import { Popup } from "./Popup.js";
 import {Card} from "./Card.js";
 import UserInfo from "./UserInfo.js";
-import Api from "./Api.js";
+import {apiElement} from "./Api.js";
 
 export default class PopupWithForm extends Popup{
   constructor(config) {
@@ -66,6 +66,18 @@ export default class PopupWithForm extends Popup{
     setTimeout(modal.close(e, modal), 175)
   }
 
+  //AVATAR
+    static event_add_avatar(e, modal) {
+        e.preventDefault();
+
+        const linkImage = document.querySelector(".elements-modal__input").value;
+        document.querySelector(".profile__img").src = linkImage;
+
+        apiElement.patchAvatar(linkImage)
+
+        setTimeout(modal.close(e, modal), 175)
+    }
+
     setEventListeners(){
         super.setEventListeners();
         const modal = new PopupWithForm(this._config);
@@ -81,6 +93,13 @@ export default class PopupWithForm extends Popup{
             PopupWithForm.event_add_card(e, modal)
           })
         }
+
+        if (this._config.type === "avatar"){
+          document.querySelector('.elements-modal__button').addEventListener("click", (e) => {
+            PopupWithForm.event_add_avatar(e, modal)
+          })
+        }
+
     }
 
 }

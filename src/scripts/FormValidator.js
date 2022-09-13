@@ -13,7 +13,6 @@ export default class FormValidator {
         });
 
         this._setEventListeners();
-
     }
 
     static _checkInputValidity(form, inputElement) {
